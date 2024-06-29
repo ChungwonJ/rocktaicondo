@@ -1,10 +1,16 @@
 import React from "react";
-import Router from "next/router";
+import { useRouter } from "next/router";
 
 function Footer() {
+  const router = useRouter()
   return (
     <>
-      <footer>푸터</footer>
+      <footer>
+        <div onClick={()=>{router.push('/')}}>condo</div>
+        <div onClick={()=>{router.push('/golf')}}>golf</div>
+        <div onClick={()=>{router.push('/reservation')}}>예약</div>
+        <div>4</div>
+      </footer>
     </>
   );
 }

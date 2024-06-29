@@ -1,1 +1,16 @@
+@import '~bootstrap/scss/bootstrap';
 @import '/styles/clear.scss';
+@import '/styles/components/layout/layout.scss';
+@import '/styles/components/mainswiper.scss';
+@import '/styles/components/sendEmail.scss';
+@import '/styles/pages/room.scss';
+
+.wrap {
+  background: aliceblue;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+section{
+  padding: 10px 20px;
+}

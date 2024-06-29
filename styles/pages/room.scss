@@ -1,0 +1,67 @@
+.roomSection{
+  padding-bottom: 120px;
+}
+
+.roomTitle {
+  margin-bottom: 10px;
+}
+
+.roomTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  margin-bottom: 15px;
+
+  &>li {
+    list-style: square;
+    margin-left: 20px;
+  }
+}
+
+.roomPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roomBtn {
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  z-index: 3;
+
+  &>button {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+  }
+}
+
+.accordion-button{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.roomPriceGrid{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roomPriceRed {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
+.roomGuide{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &>li{
+    list-style: inside;
+    font-size: 14px;
+  }
+}

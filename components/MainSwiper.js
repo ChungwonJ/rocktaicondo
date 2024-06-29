@@ -4,10 +4,11 @@ import Image from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import { Autoplay, EffectFade } from 'swiper/modules';
+import { ROOMS } from '@/define/itemList';
 
 export default function MainSwiper() {
   return (
@@ -22,18 +23,11 @@ export default function MainSwiper() {
         modules={[EffectFade, Autoplay]}
         className="mainSwiper"
       >
-        <SwiperSlide>
-          <img className='swiperImg' src="/images/swipe1.webp" />
+        {ROOMS.map((item,index)=>(
+          <SwiperSlide key={index}>
+          <img className='swiperImg' src={item.imgSrc} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img className='swiperImg' src="/images/swipe2.webp" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className='swiperImg' src="/images/swipe3.webp" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className='swiperImg' src="/images/swipe4.webp" />
-        </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

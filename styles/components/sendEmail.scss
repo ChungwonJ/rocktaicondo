@@ -1,0 +1,30 @@
+.sendEmail{
+  padding-bottom: 80px;
+}
+
+.emailTitle{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inputGrid>textarea{
+  resize: none;
+  height: 150px;
+}
+
+.emailErr{
+  padding: 10px;
+  padding-top: 0;
+  color: red;
+}
+
+.inputGrid {
+  padding: 10px;
+}
+
+.emailBtn{
+  display: flex;
+  justify-content: center;
+}
+

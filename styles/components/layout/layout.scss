@@ -8,6 +8,7 @@ header {
   align-items: center;
   z-index: 4;
   background: #fff;
+  border-bottom: 1px solid;
 }
 
 footer{
@@ -18,14 +19,33 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
   z-index: 4;
+  box-shadow: 0px -5px 5px 0px #ededed;
+  background-color: #fff;
 
   &>div{
     flex: 1 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size:14px;
+
+    &>svg{
+      font-size: 24px;
+    }
+
+    &>a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+      &>svg{
+        font-size: 24px;
+      }
+    }
   }
 }
 

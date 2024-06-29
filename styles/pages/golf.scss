@@ -1,0 +1,31 @@
+.golfTitle{
+  text-align: center;
+  padding-top : 10px;
+  padding-bottom: 10px;
+}
+
+.golfList{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top : 1px solid #f2f2f2;
+
+  &>li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor:pointer;
+    border-bottom : 1px solid #f2f2f2;
+    padding-bottom: 10px;
+
+    &>span:first-child{
+      padding-left: 15px;
+    }
+
+    &>span:last-child{
+      flex: 2;
+      text-align: center;
+    }
+  }
+}

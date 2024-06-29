@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Spiner from "@/components/Spiner";
 import Form from "react-bootstrap/Form";
@@ -44,16 +44,20 @@ export default function SendEmail() {
   };
 
   const sendEmail = (e) => {
+    const EMAIL_SERVICE_ID = process.env.REACT_APP_EMAIL_SERVICE_ID
+    const EMAIL_TEMPLATE_ID = process.env.REACT_APP_EMAIL_TEMPLATE_ID
+    const EMAIL_PUBLIC_KEY = process.env.REACT_APP_EMAIL_PUBLIC_KEY
+
     e.preventDefault();
     if (!validateForm()) return;
 
     setIsLoading(true);
     emailjs
       .sendForm(
-        "service_zmjw1bj",
-        "template_to4e1y7",
+        EMAIL_SERVICE_ID,
+        EMAIL_TEMPLATE_ID,
         form.current,
-        "SsFeyiwkcLWPLI81b"
+        EMAIL_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -68,6 +72,14 @@ export default function SendEmail() {
         }
       );
   };
+
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isLoading]);
 
   return (
     <>
@@ -101,7 +113,7 @@ export default function SendEmail() {
           {errors.phone && <p className="emailErr">{errors.phone}</p>}
 
           <div className="inputGrid">
-            <Form.Label>전화번호</Form.Label>
+            <Form.Label>여권번호</Form.Label>
             <Form.Control
               type="text"
               name="passport"

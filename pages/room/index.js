@@ -1,11 +1,14 @@
 import AccordionComponent from '@/components/AccordionComponent'
 import MainSwiper from '@/components/MainSwiper'
+import { ROOMS } from '@/define/itemList'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 function Room() {
+  const router = useRouter()
   return (
     <>
-      <MainSwiper/>
+      <MainSwiper itemList={ROOMS}/>
       <section className='roomSection'>
         <h1 className='roomTitle'>Kaset Nawamin SUPALAI CUTE</h1>
         <ul className='roomTxt'>
@@ -21,7 +24,7 @@ function Room() {
       </div>
       </section>
       <div className='roomBtn'>
-        <button>예약하기</button>
+        <button onClick={()=>{router.push('/reservation')}}>예약하기</button>
       </div>
     </>
   )

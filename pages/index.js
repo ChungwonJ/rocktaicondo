@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>RakThai</title>
         <meta name="description" content="태국에 모든것 RakThai입니다." />
-        <meta name="keywords" content="태국, 태국여행, 태국수입, 골프, 태국골프, 방콕, 파타야" />
+        <meta name="keywords" content="태국, 태국여행, 태국수입, 골프, 태국골프, 방콕, 파타야, 락타이" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="RakThai"/>
         <meta property="og:description" content="태국에 모든것 RakThai입니다."/>

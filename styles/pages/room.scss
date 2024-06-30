@@ -67,3 +67,9 @@
     font-size: 14px;
   }
 }
+
+.accordion-body{
+  &>a>img{
+    width: 100%;
+  }
+}

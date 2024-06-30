@@ -6,8 +6,15 @@ import Button from "react-bootstrap/Button";
 
 export default function SendEmail() {
   const form = useRef();
+  const today = new Date();
+  const formattedToday = today.toISOString().split('T')[0];
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const formattedTomorrow = tomorrow.toISOString().split('T')[0];
 
   const initialFormData = {
+    startDate: "",
+    endDate: "",
     name: "",
     phone: "",
     passport: "",
@@ -35,6 +42,17 @@ export default function SendEmail() {
 
   const validateForm = () => {
     const newErrors = {};
+
+    if (!formData.startDate || !formData.endDate) {
+      newErrors.reservationDate = "날짜를 확인해주세요.";
+    } else {
+      const startDate = new Date(formData.startDate);
+      const endDate = new Date(formData.endDate);
+      if (endDate <= startDate) {
+        newErrors.reservationDate = "날짜를 확인해주세요.";
+      }
+    }
+
     if (!formData.name) newErrors.name = "이름을 입력해주세요.";
     if (!formData.phone) newErrors.phone = "전화번호를 입력해주세요.";
     if (!formData.passport) newErrors.passport = "여권번호를 입력해주세요.";
@@ -86,17 +104,40 @@ export default function SendEmail() {
       <section className="sendEmail">
         <h1 className="emailTitle">예약신청서</h1>
         <form className="emailForm" ref={form} onSubmit={sendEmail}>
-          <div className="emailOne">
-            <div className="inputGrid emailOneInput">
-              <Form.Label>이름</Form.Label>
+          <div className="reservationDate">
+            <div className="inputGrid">
+              <Form.Label>입실일</Form.Label>
               <Form.Control
-                type="text"
-                name="name"
-                value={formData.name}
-                placeholder="이름을 입력해주세요"
+                type="date"
+                name="startDate"
+                value={formData.startDate}
+                min={formattedToday}
                 onChange={handleInputChange}
               />
             </div>
+
+            <div className="inputGrid">
+              <Form.Label>퇴실일</Form.Label>
+              <Form.Control
+                type="date"
+                name="endDate"
+                value={formData.endDate}
+                min={formData.startDate ? new Date(new Date(formData.startDate).setDate(new Date(formData.startDate).getDate() + 1)).toISOString().split('T')[0] : formattedTomorrow}
+                onChange={handleInputChange}
+              />
+            </div>
+          </div>
+          {errors.reservationDate && <p className="emailErr">{errors.reservationDate}</p>}
+
+          <div className="inputGrid emailOneInput">
+            <Form.Label>이름</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              value={formData.name}
+              placeholder="이름을 입력해주세요"
+              onChange={handleInputChange}
+            />
           </div>
           {errors.name && <p className="emailErr">{errors.name}</p>}
 

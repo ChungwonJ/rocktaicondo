@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <header>
-        <Link href='/'>Rocktai</Link>
+        <Link href='/'>RakThai</Link>
       </header>
     </>
   );

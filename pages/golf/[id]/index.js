@@ -16,15 +16,15 @@ function GolfComponent() {
     )
   }
 
-  const selectedGolf = GOLF.find((item) => item.id === id);
+  const golf = GOLF.find((item) => item.id === id);
 
   return (
     <div>
-      {selectedGolf && (
+      {golf && (
         <>
-          <MainSwiper itemList={selectedGolf.img} />
+          <MainSwiper itemList={golf.img} />
           <div>
-            <h2>{selectedGolf.name}</h2>
+            <h2>{golf.name}</h2>
           </div>
         </>
       )}

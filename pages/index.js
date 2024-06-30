@@ -16,6 +16,7 @@ export default function Home() {
         <meta property="og:title" content="RakThai"/>
         <meta property="og:description" content="태국에 모든것 RakThai입니다."/>
         <meta property="og:image" content="/logo.jpg"/>
+        <meta property="og:url" content="https://rakthaicondo.vercel.app"></meta>
         <meta name="naver-site-verification" content="a3c52e8fae8364875a0b84e0464ed52e3e2bef54" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

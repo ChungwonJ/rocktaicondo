@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>락타이콘도 - 태국여행 및 콘도 예약 | 락타이 콘도 - 태국 콘도 예약 시스템</title>
-        <meta name="description" content="태국여행을 계획 중이라면, 방콕, 파타야 등 다양한 지역의 콘도를 쉽게 예약하세요. 락타이콘도는 최고의 콘도 정보를 제공합니다." />
+        <title>락타이콘도</title>
+        <meta name="description" content="태국여행을 계획 중이라면, 방콕, 파타야 등 다양한 지역의 콘도를 쉽게 예약하세요. 락타이콘도는 최고의 콘도 정보를 제공합니다. 태국에 모든것 락타이 콘도" />
         <meta name="keywords" content="태국여행, 태국 콘도 예약, 콘도, 방콕 콘도 예약, 파타야 콘도 예약, 태국 여행 예약, 콘도 시스템" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="태국여행 및 콘도 예약 - 락타이콘도 | 태국 콘도 예약 시스템" />

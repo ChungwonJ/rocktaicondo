@@ -1,2 +1,4 @@
 User-agent: *
 Allow:/
+
+Sitemap: https://rakthaicondo.vercel.app/sitemap.xml

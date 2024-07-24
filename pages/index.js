@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>태국여행 및 콘도 예약 - 락타이콘도 | 태국 부동산 및 예약 시스템</title>
+        <title>락타이콘도 - 태국여행 및 콘도 예약 | 태국 부동산 및 예약 시스템</title>
         <meta name="description" content="태국여행을 계획 중이라면, 방콕, 파타야 등 다양한 지역의 콘도를 쉽게 예약하세요. 락타이콘도는 최고의 태국 부동산 정보를 제공합니다." />
         <meta name="keywords" content="태국여행, 태국 콘도 예약, 태국 부동산, 방콕 콘도 예약, 파타야 콘도 예약, 태국 여행 예약, 태국 부동산 시스템" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

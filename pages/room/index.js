@@ -11,7 +11,7 @@ function Room() {
     <>
       <MainSwiper itemList={ROOMS}/>
       <section className='roomSection'>
-        <h1 className='roomTitle'>Kaset Nawamin SUPALAI CUTE</h1>
+        <h1 className='roomTitle'>락타이콘도 - Kaset Nawamin SUPALAI CUTE</h1>
         <ul className='roomTxt'>
           <li>BTS역 도보 5분이내</li>
           <li>호텔보다 저렴한 가격</li>

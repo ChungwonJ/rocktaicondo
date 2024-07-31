@@ -3,8 +3,10 @@ import emailjs from "@emailjs/browser";
 import Spiner from "@/components/Spiner";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useRouter } from "next/router";
 
 export default function SendEmail() {
+  const router = useRouter()
   const form = useRef();
   const today = new Date();
   const formattedToday = today.toISOString().split('T')[0];
@@ -82,6 +84,7 @@ export default function SendEmail() {
           alert("전송에 성공하였습니다.");
           console.log(result.text);
           setIsLoading(false);
+          router.push('/')
         },
         (error) => {
           alert("전송에 실패하였습니다. 다시 시도해주세요.");

@@ -81,7 +81,7 @@ export default function SendEmail() {
       )
       .then(
         (result) => {
-          alert("전송에 성공하였습니다.");
+          alert("예약신청이 완료되었습니다.");
           console.log(result.text);
           setIsLoading(false);
           router.push('/')

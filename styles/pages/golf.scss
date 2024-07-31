@@ -29,3 +29,22 @@
     }
   }
 }
+
+.golfTxt{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  text-align: center;
+
+  &>h2{
+    margin-top: 10px;
+    font-size: 40px;
+  }
+
+  &>h3{
+    font-size: 24px;
+  }
+}

@@ -9,12 +9,12 @@ const Map = () => {
 
     window.initMap = function() {
       const map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 37.362, lng: 126.935 },
+        center: { lat: 37.3620592, lng: 126.9446452 },
         zoom: 15,
       });
 
       const marker = new google.maps.Marker({
-        position: { lat: 37.362, lng: 126.935 },
+        position: { lat: 37.3620592, lng: 126.9446452 },
         map,
         title: '경아아파트',
       });

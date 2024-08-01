@@ -33,7 +33,7 @@ function Footer() {
           <span style={{color : getIconColor('/reservation')}}>예약</span>
         </div>
         <div>
-          <Link href='http://pf.kakao.com/_BqUkxj/chat' _blank="true">
+          <Link href='http://pf.kakao.com/_BqUkxj/chat'>
             <RiKakaoTalkLine/>
             문의
           </Link>

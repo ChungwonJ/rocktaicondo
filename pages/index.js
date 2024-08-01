@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Room from "./room";
+import Map from "@/components/Map";
 
 const inter = Inter({ subsets: ["latin"] });
 

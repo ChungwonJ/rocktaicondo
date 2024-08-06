@@ -4,6 +4,7 @@ import { GOLF } from "@/define/itemList";
 import MainSwiper from "@/components/MainSwiper";
 import Spiner from "@/components/Spiner";
 import Link from "next/link";
+import Map from "@/components/Map";
 
 function GolfComponent() {
   const router = useRouter();
@@ -50,6 +51,12 @@ function GolfComponent() {
               <li>경치: {golf.scenery}</li>
               <li>이벤트: {golf.event}</li>
             </ul>
+
+            <Map 
+              title={golf.title}
+              lat={golf.lat}
+              lng={golf.lng}
+            />
           </div>
         </>
       )}

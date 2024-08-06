@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const Map = () => {
+const Map = (props) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyD5BN9w9KIf9IVOOgnXpLy-t63Vr-EPRww&callback=initMap`;
@@ -9,19 +9,15 @@ const Map = () => {
 
     window.initMap = function() {
       const map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 37.3620592, lng: 126.9446452 },
+        center: { lat: props.lat, lng: props.lng },
         zoom: 15,
       });
 
-      const marker = new google.maps.Marker({
-        position: { lat: 37.3620592, lng: 126.9446452 },
-        map,
-        title: '경아아파트',
-      });
-
-      marker.addListener('click', () => {
-        alert('경아아파트를 클릭했습니다.');
-      });
+      // const marker = new google.maps.Marker({
+      //   position: { lat: props.lat, lng: props.lng },
+      //   map,
+      //   title: props.title,
+      // });
     };
 
     return () => {
@@ -29,7 +25,7 @@ const Map = () => {
     };
   }, []);
 
-  return <div id="map" style={{ width: '100%', height: '500px' }}></div>;
+  return <div id="map" style={{ width: '100%', height: '350px' }}></div>;
 };
 
 export default Map;

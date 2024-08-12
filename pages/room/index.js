@@ -3,7 +3,6 @@ import MainSwiper from '@/components/MainSwiper'
 import { ROOMS } from '@/define/itemList'
 import React from 'react'
 import { useRouter } from 'next/router'
-import Map from '@/components/Map'
 
 function Room() {
   const router = useRouter()

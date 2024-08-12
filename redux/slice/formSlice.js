@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  company: '한화생명'
+  name: ''
 };
 
 export const formSlice = createSlice({

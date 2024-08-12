@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const Map = (props) => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyD5BN9w9KIf9IVOOgnXpLy-t63Vr-EPRww&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_PUBLIC_KEY}-t63Vr-EPRww&callback=initMap`;
     script.async = true;
     document.head.appendChild(script);
 

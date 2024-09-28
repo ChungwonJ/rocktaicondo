@@ -14,6 +14,7 @@ function Service() {
     phonetwo: "",
     kakao: "",
     recipient: "",
+    shipping: "",
     recipientphone: "",
     recipientaddress: "",
     date: "",
@@ -53,6 +54,8 @@ function Service() {
       newErrors.kakao = "보내는 고객님 카카오톡 아이디를 입력해주세요.";
     if (!formData.recipient)
       newErrors.recipient = "받는 고객님 이름을 영어로 입력해주세요.";
+    if (!formData.shipping)
+      newErrors.shipping = "배송방법을 입력해주세요.";
     if (!formData.recipientphone)
       newErrors.recipientphone = "받는 고객님 번호를 입력해주세요.";
     if (!formData.recipientaddress)
@@ -163,6 +166,20 @@ function Service() {
             />
           </div>
           {errors.recipient && <p className="emailErr">{errors.recipient}</p>}
+
+          <div className="inputGrid">
+            <Form.Label>배송방법</Form.Label>
+            <Form.Select
+              name="shipping"
+              value={formData.shipping}
+              onChange={handleInputChange}
+            >
+              <option value="">배송방법을 선택해주세요</option>
+              <option value="택배">택배</option>
+              <option value="그랩(퀵,방콕한정)">그랩(퀵,방콕한정)</option>
+            </Form.Select>
+          </div>
+          {errors.shipping && <p className="emailErr">{errors.shipping}</p>}
 
           <div className="inputGrid">
             <Form.Label>받는사람 전화번호(태국)</Form.Label>
